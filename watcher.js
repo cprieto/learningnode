@@ -9,8 +9,18 @@ if (!filename) {
 }
 
 fs.watchFile(filename, function () {
-    var ls = spawn('ls', ['-lh', filename]);
-    ls.stdout.pipe(process.stdout);
+    var output = '',
+        ls     = spawn('ls', ['-lh', filename]);
+
+    ls.on('data', function(chunk) {
+        output += chunk.toString();
+        console.log(output);
+    });
+
+    ls.on('close', function() {
+        var parts = output.split(/\s+/);
+        console.dir(parts);
+    });
 });
 
 console.log("Now watching for changes in '" + filename + "'...");
