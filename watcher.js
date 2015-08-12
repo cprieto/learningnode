@@ -5,7 +5,8 @@ if (!filename) {
     throw Error("You need to pass the name of the file to watch as parameter!");
 }
 
-fs.watch(filename, function () {
-    console.log("File '" + filename + "' just changed");
+fs.watchFile(filename, function () {
+    console.log("File '" + filename + "' just changed.");
 });
+
 console.log("Now watching for changes in '" + filename + "'...");
