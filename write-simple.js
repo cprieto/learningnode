@@ -1,6 +1,6 @@
 'use strict';
 
-var fs = require('fs');
+const fs = require('fs');
 
 fs.writeFile('target.txt', 'weird message here... ', function(err) {
     if (err) {
