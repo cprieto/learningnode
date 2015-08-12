@@ -1,6 +1,11 @@
-const fs = require('fs');
+const fs = require('fs'),
+    filename = process.argv[2];
 
-fs.watch('target.txt', function() {
-    console.log("File 'target.txt' just changed");
+if (!filename) {
+    throw Error("You need to pass the name of the file to watch as parameter!");
+}
+
+fs.watch(filename, function () {
+    console.log("File '" + filename + "' just changed");
 });
-console.log("Now watching for changes in 'target.txt'...");
+console.log("Now watching for changes in '" + filename + "'...");
