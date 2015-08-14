@@ -18,3 +18,8 @@ const LDJClient = function (stream) {
 };
 
 util.inherits(LDJClient, events.EventEmitter);
+
+exports.LDJClient = LDJClient;
+exports.connect = function (stream) {
+    return new LDJClient(stream);
+}
