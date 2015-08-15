@@ -15,6 +15,14 @@ watch.on('change', function () {
     }));
 });
 
-publisher.bind('tcp://*:5432', function() {
+publisher.on('accept', function (fd, ep) {
+    console.log("Connection accepted.");
+})
+
+publisher.on('listen', function(fd, ep) {
     console.log("Listening to connections...");
-});
+})
+
+publisher.monitor(500, 0);
+
+publisher.bind('tcp://*:5432');
