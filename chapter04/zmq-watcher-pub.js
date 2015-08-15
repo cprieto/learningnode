@@ -15,13 +15,13 @@ watch.on('change', function () {
     }));
 });
 
-publisher.on('accept', function (fd, ep) {
+publisher.on('accept', function () {
     console.log("Connection accepted.");
-})
+});
 
-publisher.on('listen', function(fd, ep) {
+publisher.on('listen', function() {
     console.log("Listening to connections...");
-})
+});
 
 publisher.monitor(500, 0);
 
