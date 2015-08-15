@@ -15,8 +15,6 @@ watch.on('change', function () {
     }));
 });
 
-publisher.on('connect', function() {
-    console.log("Client just connected.");
+publisher.bind('tcp://*:5432', function() {
+    console.log("Listening to connections...");
 });
-
-publisher.bind('tcp://*:5432');
