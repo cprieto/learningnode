@@ -10,7 +10,7 @@ if (!filename) {
 
 req.on('message', function (data) {
     var response = JSON.parse(data);
-    console.log("Receiving response: " + response);
+    console.log("Receiving response: ", response);
 });
 
 req.connect('tcp://localhost:5433');
