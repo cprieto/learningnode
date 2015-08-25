@@ -35,3 +35,9 @@ process.on('SIGINT', function () {
     console.log("Closing connections.");
     rep.close();
 });
+
+// Task2: Adding sigterm signal
+process.on('SIGTERM', function () {
+    console.log("Closing connections.");
+    rep.close();
+});
