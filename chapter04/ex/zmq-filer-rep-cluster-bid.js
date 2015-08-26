@@ -36,6 +36,12 @@ if (cluster.isMaster) {
     cluster.on('online', function (worker) {
         console.log('Worker ready: ' + worker.process.pid);
     });
+
+    process.on('SIGINTg', function() {
+        output.close();
+        input.close();
+    });
+
 } else { // NOTE: This is a worker
     let input  = zmq.socket('pull'),
         output = zmq.socket('push');
