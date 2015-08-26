@@ -9,6 +9,7 @@
   "author": "Cristian Prieto",
   "license": "ISC",
   "dependencies": {
+    "chance": "^0.7.6",
     "zmq": "^2.12.0"
   }
 }
