@@ -1,6 +1,9 @@
 {
-    "name": "book-tools",
-    "version": "0.1.0",
-    "description": "Tools for creating an ebook database",
-    "author": "Cristian Prieto <me@cprieto.com> (cprieto.com)"
+  "name": "book-tools",
+  "version": "0.1.0",
+  "description": "Tools for creating an ebook database",
+  "author": "Cristian Prieto <me@cprieto.com> (cprieto.com)",
+  "dependencies": {
+    "chance": "^0.7.6"
+  }
 }
