@@ -4,6 +4,7 @@
   "description": "Tools for creating an ebook database",
   "author": "Cristian Prieto <me@cprieto.com> (cprieto.com)",
   "dependencies": {
-    "chance": "^0.7.6"
+    "chance": "^0.7.6",
+    "request": "^2.61.0"
   }
 }
