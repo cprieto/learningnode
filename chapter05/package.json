@@ -4,6 +4,7 @@
   "description": "Tools for creating an ebook database",
   "author": "Cristian Prieto <me@cprieto.com> (cprieto.com)",
   "dependencies": {
+    "async": "^1.5.0",
     "chance": "^0.7.6",
     "cheerio": "^0.19.0",
     "file": "^0.2.2",
