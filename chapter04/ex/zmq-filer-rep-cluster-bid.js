@@ -37,7 +37,7 @@ if (cluster.isMaster) {
         console.log('Worker ready: ' + worker.process.pid);
     });
 
-    process.on('SIGINTg', function() {
+    process.on('SIGINT', function() {
         output.close();
         input.close();
     });
